@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gempa</title>
+</head>
+
+<body>
+    <script>
+        //-----------------membuat class------------------
+        class Gempa {
+            //member1 & 2 : variabel dan konstruktor
+            constructor(lokasi, skala) {
+                this.lok = lokasi;
+                this.skl = skala;
+            }
+            //member3 fungsi2
+            dampak(skala) {
+                //this.saldo = this.saldo + uang;
+                this.skl += skala;
+                if (skala <= 2) {
+                    document.write(`Lokasi: ${this.lok}
+                    <br/>Skala: ${this.skl}
+                    <br/>Dampak: Tidak Terasa<hr/>`);
+                } else if (skala > 2 && skala <= 4) {
+                    document.write(`Lokasi: ${this.lok}
+                    <br/>Skala: ${this.skl}
+                    <br/>Dampak: Bangunan Retak-retak<hr/>`);
+                } else if (skala > 4 && skala <= 6) {
+                    document.write(`Lokasi: ${this.lok}
+                    <br/>Skala: ${this.skl}
+                    <br/>Dampak: Bangunan Roboh<hr/>`);
+                } else {
+                    document.write(`Lokasi: ${this.lok}
+                    <br/>Skala: ${this.skl}
+                    <br/>Dampak: Bangunan Roboh dan Berpotensi Tsunami<hr/>`);
+                }
+            }
+        }
+        //---------------ciptakan object------------------
+        const nama = ['Surabaya', 'Kediri', 'Jakarta', 'Tangerang', 'Lombok', 'Jogjakarta', 'Medan', 'Malang', 'Bogor',
+            'Solo'
+        ];
+
+        let daerah1 = new Gempa('Surabaya', 0);
+        daerah1.dampak(Math.random() * 10);
+        let daerah2 = new Gempa('Kediri', 0);
+        daerah2.dampak(Math.random() * 10);
+        let daerah3 = new Gempa('Jakarta', 0);
+        daerah3.dampak(Math.random() * 10);
+        let daerah4 = new Gempa('Tangerang', 0);
+        daerah4.dampak(Math.random() * 10);
+        let daerah5 = new Gempa('Lombok', 0);
+        daerah5.dampak(Math.random() * 10);
+        let daerah6 = new Gempa('Jogjakarta', 0);
+        daerah6.dampak(Math.random() * 10);
+        let daerah7 = new Gempa('Medan', 0);
+        daerah7.dampak(Math.random() * 10);
+        let daerah8 = new Gempa('Malang', 0);
+        daerah8.dampak(Math.random() * 10);
+        let daerah9 = new Gempa('Bogor', 0);
+        daerah9.dampak(Math.random() * 10);
+        let daerah10 = new Gempa('Solo', 0);
+        daerah10.dampak(Math.random() * 10);
+    </script>
+</body>
+
+</html>
